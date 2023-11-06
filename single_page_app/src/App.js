@@ -1,20 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
-import List from './components/List';
+import Projects from './components/Projects';
 
 function App() {
-  const [showList, setShowList] = useState(false);
-
   return (
-    <div>
-      <button onClick={() => setShowList(!showList)}>
-        {showList ? 'Hide List' : 'Show List'}
-      </button>
-      <Home />
-      <About />
-      {showList && <List />}
-    </div>
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/projects">Projects</Link>
+          </li>
+        </ul>
+
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/projects" component={Projects} />
+      </div>
+    </Router>
   );
 }
 

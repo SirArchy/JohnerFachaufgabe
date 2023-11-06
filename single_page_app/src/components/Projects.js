@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import List from './components/List';
+import List from './List';
 
 function Projects() {
     const [showList, setShowList] = useState(false);

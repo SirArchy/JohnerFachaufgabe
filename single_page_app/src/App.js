@@ -1,18 +1,20 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Navigation from './Navigation';
+import React, { useState } from 'react';
+import Home from './components/Home';
+import About from './components/About';
+import List from './components/List';
 
 function App() {
+  const [showList, setShowList] = useState(false);
+
   return (
-    <Router>
-      <div>
-        <Navigation />  {/* Fügt die Navigationsleiste hinzu */}
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-      </div>
-    </Router>
+    <div>
+      <button onClick={() => setShowList(!showList)}>
+        {showList ? 'Hide List' : 'Show List'}
+      </button>
+      <Home />
+      <About />
+      {showList && <List />}
+    </div>
   );
 }
 

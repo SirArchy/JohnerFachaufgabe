@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import List from './components/List';
 
 function Projects() {
+    const [showList, setShowList] = useState(false);
   return (
     <div>
       <h1>Projects Page</h1>
-      <p>This is the Projects Page</p>
+      <button onClick={() => setShowList(!showList)}>
+        {showList ? 'Hide List' : 'Show List'}
+      </button>
+      {showList && <List />}
     </div>
   );
 }

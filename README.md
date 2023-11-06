@@ -1,6 +1,6 @@
 # Project Name
 
-Brief project description goes here. Explain what your project does and why it's useful.
+This is a sample single Page App that displays personal projects of mine. 
 
 ## Table of Contents
 
@@ -11,15 +11,14 @@ Brief project description goes here. Explain what your project does and why it's
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- navigate between pages using react router
+- shows/hides components using conditional rendering
+- renders static list using .map() function
 
 ## Demo
 
-![Example Screenshot](/images/screenshot.png)
-
-![Example Screenshot](/images/screenshot.png)
+![Home Page](/images/screenshot1.png)
+![About Page](/images/screenshot2.png)
 
 ## Installation
 
@@ -32,11 +31,4 @@ git clone https://github.com/Sirarchy/JohnerFachaufgabe.git
 ```
 
 ## Usage
-Explain how to use your project, and provide code examples when necessary.
-
-```javascript
-const yourModule = require('your-package-name');
-
-// Usage example
-yourModule.doSomething();
-```
+See README.md file in single_page_app folder

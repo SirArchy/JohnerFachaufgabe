@@ -28,7 +28,7 @@ Provide clear instructions on how to install and set up your project. For exampl
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Sirarchy/johnerFachaufgabe.git
+git clone https://github.com/Sirarchy/JohnerFachaufgabe.git
 ```
 
 ## Usage
